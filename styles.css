@@ -14,7 +14,9 @@ body {
 }
 
 .game-board {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin: 20px auto;
 }
@@ -41,6 +43,13 @@ body {
 }
 
 .message {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
 }
