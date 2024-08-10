@@ -7,6 +7,7 @@ let level = 1;
 
 function startGame() {
     document.getElementById('message').textContent = '';
+    document.getElementById('message').style.display = 'none';
     matches = 0;
     flippedCards = [];
     cards = generateCards(level);
@@ -30,7 +31,6 @@ function shuffle(array) {
 function renderBoard() {
     const board = document.getElementById('game-board');
     board.innerHTML = '';
-    board.style.gridTemplateColumns = `repeat(${Math.sqrt(cards.length)}, 1fr)`;
     cards.forEach((value, index) => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
@@ -80,7 +80,9 @@ function checkMatch() {
 function levelUp() {
     level++;
     if (level > 3) {
-        document.getElementById('message').textContent = 'Você finalizou o jogo!';
+        const messageElement = document.getElementById('message');
+        messageElement.textContent = 'Parabéns! Você finalizou o jogo!';
+        messageElement.style.display = 'block';
         level = 1;
     } else {
         document.getElementById('message').textContent = `Nível ${level}`;
