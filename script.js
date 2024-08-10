@@ -80,7 +80,7 @@ function checkMatch() {
 function levelUp() {
     level++;
     if (level > 3) {
-        document.getElementById('message').textContent = 'Parabéns! Você completou todos os níveis!';
+        document.getElementById('message').textContent = 'Você finalizou o jogo!';
         level = 1;
     } else {
         document.getElementById('message').textContent = `Nível ${level}`;

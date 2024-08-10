@@ -4,7 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     font-family: Arial, sans-serif;
 }
 
@@ -21,19 +22,25 @@ body {
 .card {
     width: 100px;
     height: 100px;
-    background-color: #ddd;
+    background-color: #444; /* Tonalidade cinza */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     cursor: pointer;
     position: relative;
+    color: #fff; /* Texto branco */
 }
 
 .card.flipped {
-    background-color: #fff;
+    background-color: #888; /* Tonalidade cinza clara */
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.message {
+    font-size: 2rem;
+    margin-top: 20px;
 }
